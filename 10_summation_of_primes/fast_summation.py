@@ -4,7 +4,9 @@
 
 def prime_sums(n):
     """
-    Return set of primes less than n
+    Return list of len = n + 1
+    index i is the sum of primes less than i
+    uses Sieve of Eratosthenes to find primes
     """
     marks = [True]*(n + 1)
     i = 3

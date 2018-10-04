@@ -7,7 +7,7 @@
 # Better solution is to build the sieve once up to 10^6, then construct table with the sums
 # See fast_summation.py for that implementation
 
-def Sieve_of_Eratosthenese(n):
+def Sieve_of_Eratosthenes(n):
     """
     Return list of primes less than n
     """
@@ -29,7 +29,7 @@ def Sieve_of_Eratosthenese(n):
     return res
 
 def summation_of_primes(n):
-    primes = Sieve_of_Eratosthenese(n)
+    primes = Sieve_of_Eratosthenes(n)
     return sum(primes)
 
 if __name__ == '__main__':
