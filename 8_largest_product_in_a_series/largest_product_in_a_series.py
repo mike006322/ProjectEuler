@@ -1,5 +1,17 @@
 #https://www.hackerrank.com/contests/projecteuler/challenges/euler008
 
+def product_of_k_digits(n, k, i):
+    """
+    multiplies k digits of num starting at i
+    """
+    b = 1
+    j = 0
+    while j < k:
+        b *= int(str(n)[i+j])
+        j += 1
+    return b
+
+
 def largest_product_in_a_series(n, k):
     """
     n and k are int
@@ -9,21 +21,13 @@ def largest_product_in_a_series(n, k):
     if the last digit is 0, rebuild the product
     compare the product to the maximum product found so far
     """
-    i = 0
-    b = 1
-    while i < k:
-        b *= int(str(n)[i])
-        i += 1
+    b = product_of_k_digits(n, k, 0)
     i = k
     m = b
     if k < len(str(n)):
         while i < len(str(n)):
             if int(str(n)[i-k]) == 0:
-                j = 1
-                b = 1
-                while j < k:
-                    b *= int(str(n)[i-k+j])
-                    j += 1
+                b = product_of_k_digits(n, k, i - k + 1)
             else:
                 b //= int(str(n)[i-k])
             b *= int(str(n)[i])

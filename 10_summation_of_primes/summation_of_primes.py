@@ -1,6 +1,13 @@
-#https://www.hackerrank.com/contests/projecteuler/challenges/euler007
+#!/bin/python3
 
-def Sieve_of_Eratostheneses(n):
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler010
+
+# This solution is correct but not fast enough
+# Number of test cases can be up to 10^4
+# Better solution is to build the sieve once up to 10^6, then construct table with the sums
+# See fast_summation.py for that implementation
+
+def Sieve_of_Eratosthenese(n):
     """
     Return list of primes less than n
     """
@@ -21,9 +28,12 @@ def Sieve_of_Eratostheneses(n):
         i += 2
     return res
 
+def summation_of_primes(n):
+    primes = Sieve_of_Eratosthenese(n)
+    return sum(primes)
+
 if __name__ == '__main__':
-    first_10000_primes = Sieve_of_Eratostheneses(104729)
     t = int(input().strip())
     for a0 in range(t):
         n = int(input().strip())
-        print(first_10000_primes[n-1])
+        print(summation_of_primes(n))
