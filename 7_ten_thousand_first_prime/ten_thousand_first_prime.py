@@ -21,8 +21,6 @@ def Sieve_of_Eratosthenese(n):
         i += 2
     return res
 
-
-
 if __name__ == '__main__':
     first_10000_primes = Sieve_of_Eratosthenese(104729)
     t = int(input().strip())
