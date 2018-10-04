@@ -8,31 +8,31 @@ def prime_sums(n):
     index i is the sum of primes less than i
     uses Sieve of Eratosthenes to find primes
     """
-    marks = [True]*(n + 1)
+    table = [True]*(n + 1)
     i = 3
     while i <= n**.5:
-        if marks[i] == True:
+        if table[i] == True:
             j = 1
             while i + j*i <= n:
-                marks[i + j*i] = False
+                table[i + j*i] = False
                 j += 1
         i += 2
-    marks[1] = 0
-    marks[0] = 0
+    table[1] = 0
+    table[0] = 0
     if n > 1:
         s = 2
-        marks[2] = 2
+        table[2] = 2
     else:
         s = 0
     for i in range(3, n+1):
         if i%2 == 0:
-            marks[i] = False
-        if marks[i] == True:
+            table[i] = False
+        if table[i] == True:
             s += i
-            marks[i] = s
+            table[i] = s
         else:
-            marks[i] = s
-    return marks
+            table[i] = s
+    return table
 
 
 if __name__ == '__main__':
