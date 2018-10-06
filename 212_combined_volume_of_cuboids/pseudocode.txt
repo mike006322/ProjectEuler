@@ -1,0 +1,26 @@
+once we have coordinates for the cuboids the problem is finding the combined volume
+idea: use a 3D tree data structure and prune the tree to remove overlapping parts
+then to get volume, examine the leaves of the pruned tree
+Make the tree by using a higher-dimensional interval tree
+1D = interval tree, 2D = rectangle tree, 3D = cuboid tree
+the complexity is in pruning the 3D tree. It's more complex than an interval tree
+How fast would the pruning function be? fast enough?
+
+https://en.wikipedia.org/wiki/Segment_tree
+https://en.wikipedia.org/wiki/Interval_tree
+https://en.wikipedia.org/wiki/K-d_tree
+https://en.wikipedia.org/wiki/Hyperrectangle
+https://en.wikipedia.org/wiki/Range_searching#Orthogonal_range_searching
+
+another idea: we could use "plane sweep" technique similar to "line sweep" technique used for rectangles
+https://www.topcoder.com/community/competitive-programming/tutorials/line-sweep-algorithms/
+
+https://proofwiki.org/wiki/Cardinality_of_Set_Union
+
+idea: make the 3D tree: Start adding cuboids.
+If a new cuboid intersects cuboids (but not contained inside the cuboids it intersects),
+calculate the intersection cuboid and add it with the "intersection value" = 1
+Add another cuboid, find which cuboids it intersects with
+and add the intersection cuboids with "intersection value" = 1 + intersection value of intersecting cuboid
+Finally, sum the volume of cuboids where the volumes of cuboids with odd intersection values are negative
+will that be too many cuboids?
