@@ -40,7 +40,7 @@ class Test(unittest.TestCase):
         number_to_words.spell_num3('1010001')
         if not hasattr(sys.stdout, "getvalue"):
             self.fail("need to run in buffered mode")
-        output = sys.stdout.getvalue().strip() # because stdout is an StringIO instance
+        output = sys.stdout.getvalue().strip()
         self.assertEqual(output,'One Million Ten Thousand One')
 
         print()
@@ -48,7 +48,7 @@ class Test(unittest.TestCase):
         number_to_words.spell_num3('1010')
         if not hasattr(sys.stdout, "getvalue"):
             self.fail("need to run in buffered mode")
-        output = sys.stdout.getvalue().strip() # because stdout is an StringIO instance
+        output = sys.stdout.getvalue().strip()
         self.assertEqual(output,'One Thousand Ten')
 
         print()
@@ -56,7 +56,7 @@ class Test(unittest.TestCase):
         number_to_words.spell_num3('200000')
         if not hasattr(sys.stdout, "getvalue"):
             self.fail("need to run in buffered mode")
-        output = sys.stdout.getvalue().strip() # because stdout is an StringIO instance
+        output = sys.stdout.getvalue().strip()
         self.assertEqual(output,'Two Hundred Thousand')
 
         print()

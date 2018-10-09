@@ -7,8 +7,6 @@ ones = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nin
 
 threes_names = ['Trillion ', 'Billion ', 'Million ', 'Thousand ', '']
 
-tens = ['Zero', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
-
 def break_to_threes(num):
     """
     input int
@@ -113,9 +111,11 @@ def spell_num2(num):
         i += 1
     return res
 
-
+###################################################################################################
 
 tn = ['', 'Thousand ', 'Million ', 'Billion ', 'Trillion ']
+
+tens = ['Zero', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
 
 o = ['', 'One ', 'Two ', 'Three ', 'Four ', 'Five ', 'Six ', 'Seven ', 'Eight ', 'Nine ', 'Ten ', 'Eleven ', 'Twelve ', 'Thirteen ',
         'Fourteen ', 'Fifteen ', 'Sixteen ', 'Seventeen ', 'Eighteen ', 'Nineteen ']
@@ -132,7 +132,6 @@ def spell_num3(num):
     if num == '0':
         return 'Zero'
     else:
-        already_said = False
         while num:
             a = num[:3]
             num = num[3:]
