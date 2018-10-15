@@ -51,7 +51,7 @@ def amicable_numbers(N):
     d = [0]*10000000
     for i in range(220, N+1):
         d[i] = sum_of_proper_divisors(i, primes)
-        if 1.1*i > d[i] > N:
+        if 1.4*i > d[i] > N:
             if d[d[i]] == 0:
                 if i != d[i]:
                     d[d[i]] = sum_of_proper_divisors(d[i], primes)

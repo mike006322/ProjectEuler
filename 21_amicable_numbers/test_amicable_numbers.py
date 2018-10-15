@@ -21,5 +21,9 @@ class Test(unittest.TestCase):
         primes = fast_amicable_numbers.Sieve_of_Eratosthenes(1000)
         self.assertEqual(fast_amicable_numbers.sum_of_proper_divisors(284, primes), 220)
 
+    def test_amicable_numbers(self):
+        self.assertEqual(fast_amicable_numbers.amicable_numbers(300), {220, 284})
+        self.assertEqual(fast_amicable_numbers.amicable_numbers(221), {220})
+
 if __name__ == '__main__':
     unittest.main()
