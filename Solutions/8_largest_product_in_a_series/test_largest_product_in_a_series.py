@@ -7,6 +7,8 @@ class Test(unittest.TestCase):
         self.assertEqual(largest_product_in_a_series.largest_product_in_a_series(1234, 2), 12)
         self.assertEqual(largest_product_in_a_series.largest_product_in_a_series(1234, 4), 24)
         self.assertEqual(largest_product_in_a_series.largest_product_in_a_series(2709360626, 5), 0)
+        self.assertEqual(largest_product_in_a_series.largest_product_in_a_series(10000023, 2), 6)
+
 
     def test_product_of_k_digits(self):
         self.assertEqual(largest_product_in_a_series.product_of_k_digits(1234, 2, 1), 6)
