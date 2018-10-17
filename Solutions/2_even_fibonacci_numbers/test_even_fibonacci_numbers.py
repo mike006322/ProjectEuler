@@ -13,6 +13,7 @@ class Test(unittest.TestCase):
 
     def test_even_fibonacci_numbers(self):
         self.assertEqual(even_fibonacci_numbers.even_fibonacci_numbers(10), 10)
+        self.assertEqual(even_fibonacci_numbers.even_fibonacci_numbers(8), 10)
 
 if __name__ == '__main__':
     unittest.main()

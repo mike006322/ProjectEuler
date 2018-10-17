@@ -23,7 +23,7 @@ def even_fibonacci_numbers(n):
     even_fib_lessthan_n = []
     i = 1
     fib_i = 1
-    while fib_i < n:
+    while fib_i <= n:
         if fib_i % 2 == 0:
             even_fib_lessthan_n.append(fib_i)
         i += 1
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     #     even_fib_lessthan_n = []
     #     i = 1
     #     fib_i = 1
-    #     while fib_i < n:
+    #     while fib_i <= n:
     #         if fib_i % 2 == 0:
     #             even_fib_lessthan_n.append(fib_i)
     #         i += 1
