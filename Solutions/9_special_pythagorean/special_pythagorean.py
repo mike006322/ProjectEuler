@@ -53,6 +53,8 @@ def special_pythagorean(N):
     return m
 
 if __name__ == '__main__':
+    # primitives = generate_primitive_pythagorean_triples(1000)
+    # print(list(check_multiples_of_primitives(primitives, 1000))[-1])
     # print(generate_primitive_pythagorean_triples(130))
     # print(11*60*61)
     t = int(input().strip())
