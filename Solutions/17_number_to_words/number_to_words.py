@@ -126,7 +126,6 @@ def spell_num3(num):
     Does not return anything
     Instead this function prints the number spelled out
     """
-    res = ''
     if len(num) % 3 == 1:
         num = '00' + num
     elif len(num) % 3 == 2:
@@ -139,32 +138,29 @@ def spell_num3(num):
             num = num[3:]
             if a[0] != '0':
                 a = int(a)
-                res += o[a//100] + 'Hundred '
+                print(o[a//100] + 'Hundred ', end='')
                 a %= 100
-                if str(a)[0] != '0':
-                    res += 'and '
-                    if a < 20:
-                        res += o[a]
-                    else:
-                        res += tens[a//10] + ' ' + o[a%10]
-                    res += tn[len(num)//3]
+                if a < 20:
+                    print(o[a], end='')
+                else:
+                    print(tens[a//10] + ' ' + o[a%10], end ='')
+                print(tn[len(num)//3], end ='')
             else:
                 a = int(a)
                 if a < 20:
-                    res += o[a]
+                    print(o[a], end='')
                 else:
-                    res += tens[a//10] + ' ' + o[a%10]
+                    print(tens[a//10] + ' ' + o[a%10], end ='')
                 if a != 0:
-                    res += tn[len(num)//3]
-    return res
+                    print(tn[len(num)//3], end ='')
 
 
 if __name__ == '__main__':
-    # print(spell_num3('1000000000000'))
-    # print(spell_num3('342'))
-    # print(spell_num3('200'))
-    # print(spell_num3('242300'))
-    s = ''
-    for i in range(1, 1001):
-        s += spell_num3(str(i)).replace(' ', '')
-    print(len(s))
+    # print(spell_num2('45212'))
+    spell_num3('1000000000000')
+    # t = int(input())
+    # for _ in range(t):
+    #     num = input()
+    #     spell_num3(num)
+    #     print()
+

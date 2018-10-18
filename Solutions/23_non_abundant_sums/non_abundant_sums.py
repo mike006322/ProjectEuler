@@ -63,28 +63,17 @@ def find_abundant_numbers():
 
 if __name__ == '__main__':
     abundant_numbers = find_abundant_numbers()
-    # t = int(input())
-    # for _ in range(t):
-    #     n = int(input())
-    #     if n > 20161:
-    #         print('YES')
-    #     else:
-    #         can_sum = False
-    #         for a in abundant_numbers:
-    #             if n - a in abundant_numbers:
-    #                 print('YES')
-    #                 can_sum = True
-    #                 break
-    #         if not can_sum:
-    #             print('NO')
-
-    res = []
-    for i in range(20162):
-        can_sum = False
-        for a in abundant_numbers:
-            if i - a in abundant_numbers:
-                can_sum = True
-                break
-        if not can_sum:
-            res.append(i)
-    print(sum(res))
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        if n > 20161:
+            print('YES')
+        else:
+            can_sum = False
+            for a in abundant_numbers:
+                if n - a in abundant_numbers:
+                    print('YES')
+                    can_sum = True
+                    break
+            if not can_sum:
+                print('NO')
