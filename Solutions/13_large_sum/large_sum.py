@@ -10,8 +10,11 @@ def large_sum(nums):
     return res
 
 if __name__ == '__main__':
-    n = int(input())
     nums = []
-    for _ in range(n):
-        nums.append(int(input()))
+    file = open("numbers.txt", "r")
+    for line in file:
+        nums.append(int(line))
+    # n = int(input())
+    # for _ in range(n):
+    #     nums.append(int(input()))
     print(large_sum(nums))

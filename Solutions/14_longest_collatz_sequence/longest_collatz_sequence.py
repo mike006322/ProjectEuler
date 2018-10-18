@@ -152,7 +152,7 @@ def longest_collatz_sequence(N):
 if __name__ == '__main__':
     # print(len(longest_collatz_sequence_so_far3(100000)))
     res = longest_collatz_sequence_so_far(5000000)
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        print(res[n])
+    # t = int(input())
+    # for _ in range(t):
+    #     n = int(input())
+    #     print(res[n])
