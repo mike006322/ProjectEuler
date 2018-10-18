@@ -64,8 +64,9 @@ def counting_sundays(start, end):
     return res
 
 if __name__ == '__main__':
-    t = int(input())
-    for _ in range(t):
-        start = tuple(map(int, input().split()))
-        end = tuple(map(int, input().split()))
-        print(counting_sundays(start, end))
+    print(counting_sundays((1901, 1, 1), (2000, 12, 31)))
+    # t = int(input())
+    # for _ in range(t):
+    #     start = tuple(map(int, input().split()))
+    #     end = tuple(map(int, input().split()))
+    #     print(counting_sundays(start, end))

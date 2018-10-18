@@ -87,8 +87,10 @@ def triangle_number_with_more_than_n_divisors(n):
     return table
 
 if __name__ == '__main__':
-    table = triangle_number_with_more_than_n_divisors(1000)
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        print(table[n])
+    table = triangle_number_with_more_than_n_divisors(500)
+    print(table[500])
+    # table = triangle_number_with_more_than_n_divisors(1000)
+    # t = int(input())
+    # for _ in range(t):
+    #     n = int(input())
+    #     print(table[n])

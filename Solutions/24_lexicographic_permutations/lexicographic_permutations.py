@@ -72,8 +72,10 @@ def permute_by_factorialized_index(word, index):
     return res
 
 if __name__ == '__main__':
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        index = convert_to_factorial_base_13(n - 1)
-        print(permute_by_factorialized_index('abcdefghijklm', index))
+    index = convert_to_factorial_base(1000000 - 1)
+    print(permute_by_factorialized_index('0123456789', index))
+    # t = int(input())
+    # for _ in range(t):
+    #     n = int(input())
+    #     index = convert_to_factorial_base_13(n - 1)
+    #     print(permute_by_factorialized_index('abcdefghijklm', index))

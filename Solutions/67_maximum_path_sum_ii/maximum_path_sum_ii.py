@@ -22,11 +22,17 @@ def max_path_sum(a):
     return max(b)
 
 if __name__ == '__main__':
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = []
-        for i in range(n):
-            b = list(map(int, input().split()))
-            a.append(b)
-        print(max_path_sum(a))
+    file = open('p067_triangle.txt', 'r')
+    a = []
+    for line in file:
+        b = list(map(int, line.split()))
+        a.append(b)
+    print(max_path_sum(a))
+    # t = int(input())
+    # for _ in range(t):
+    #     n = int(input())
+    #     a = []
+    #     for i in range(n):
+    #         b = list(map(int, input().split()))
+    #         a.append(b)
+    #     print(max_path_sum(a))

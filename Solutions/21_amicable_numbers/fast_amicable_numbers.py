@@ -69,18 +69,20 @@ def amicable_numbers(N):
 
 if __name__ == '__main__':
     # print(amicable_numbers(1000))
-    t = int(input())
-    Ns = []
-    max_N = 0
-    for _ in range(t):
-        num = int(input())
-        Ns.append(num)
-        if num > max_N:
-            max_N = num
-    a = amicable_numbers(max_N)
-    for N in Ns:
-        res = 0
-        for num in a:
-            if num <= N:
-                res += num
-        print(res)
+    a = amicable_numbers(10000)
+    print(sum(a))
+    # t = int(input())
+    # Ns = []
+    # max_N = 0
+    # for _ in range(t):
+    #     num = int(input())
+    #     Ns.append(num)
+    #     if num > max_N:
+    #         max_N = num
+    # a = amicable_numbers(max_N)
+    # for N in Ns:
+    #     res = 0
+    #     for num in a:
+    #         if num <= N:
+    #             res += num
+    #     print(res)

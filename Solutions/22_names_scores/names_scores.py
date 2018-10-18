@@ -22,14 +22,29 @@ class Names():
         return self.namesDict[name.lower()]
 
 if __name__ == '__main__':
+    # import fileinput
+    #
+    # with fileinput.FileInput('p022_names.txt', inplace=True, backup='.bak') as file:
+    #     for line in file:
+    #         print(line.replace(',', '\n'))
+
     n = Names()
-    N = int(input())
-    for _ in range(N):
-        name = input()
-        n.insert(name)
+    file = open('p022_names.txt', 'r')
+
+    for line in file:
+        n.insert(line.strip().replace('\"', ''))
     n.sort()
     n.score()
-    q = int(input())
-    for _ in range(q):
-        name = input()
-        print(n.get_score(name))
+    print(sum(n.namesDict.values()))
+
+    # n = Names()
+    # N = int(input())
+    # for _ in range(N):
+    #     name = input()
+    #     n.insert(name)
+    # n.sort()
+    # n.score()
+    # q = int(input())
+    # for _ in range(q):
+    #     name = input()
+    #     print(n.get_score(name))
