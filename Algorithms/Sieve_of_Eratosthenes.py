@@ -19,8 +19,7 @@ def Sieve_of_Eratosthenes(n):
         i += 2
     return res
 
-def Sieve_of_Eratosthenes2(n):
-    # https://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n-in-python/3035188#3035188
+def fast_Sieve_of_Eratosthenes(n):
     """
     Returns  a list of primes < n
     """
@@ -44,6 +43,6 @@ def Sieve_of_Eratosthenes_numpy(n):
 
 if __name__ == '__main__':
     assert Sieve_of_Eratosthenes_numpy(100) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-    assert Sieve_of_Eratosthenes2(100) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    assert fast_Sieve_of_Eratosthenes(100) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     assert Sieve_of_Eratosthenes(100) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     assert Sieve_of_Eratosthenes_numpy(105000)[10000] == 104743

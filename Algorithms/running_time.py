@@ -14,10 +14,10 @@ def time_function(f, i):
 if __name__ == '__main__':
 
     from Sieve_of_Eratosthenes import Sieve_of_Eratosthenes
-    from Sieve_of_Eratosthenes import Sieve_of_Eratosthenes2
+    from Sieve_of_Eratosthenes import fast_Sieve_of_Eratosthenes
     from Sieve_of_Eratosthenes import Sieve_of_Eratosthenes_numpy
 
     time_function(Sieve_of_Eratosthenes, 1000000)
-    time_function(Sieve_of_Eratosthenes2, 1000000)
+    time_function(fast_Sieve_of_Eratosthenes, 1000000)
     time_function(Sieve_of_Eratosthenes_numpy, 1000000)
 
