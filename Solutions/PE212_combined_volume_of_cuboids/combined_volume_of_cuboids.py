@@ -22,12 +22,7 @@ def cuboid_contained(cuboid, intersections):
     inters = []
     for c in intersections:
         inters.append(c[0])
-    begin_x = cuboid[0]
-    begin_y = cuboid[2]
-    begin_z = cuboid[4]
-    end_x = cuboid[1]
-    end_y = cuboid[3]
-    end_z = cuboid[5]
+    begin_x, end_x, begin_y, end_y, begin_z, end_z = cuboid
     x = [(begin_x, end_x)]
     y = [(begin_y, end_y)]
     z = [(begin_z, end_z)]
@@ -35,12 +30,7 @@ def cuboid_contained(cuboid, intersections):
         # pop a cuboid from inters and take it's overlapping dimensions away from x, y or z
         # if the cuboid overlaps in a way that splits a dimension then replace it with two intervals less the overlap
         c = inters.pop()
-        cbegin_x = c[0]
-        cbegin_y = c[2]
-        cbegin_z = c[4]
-        cend_x = c[1]
-        cend_y = c[3]
-        cend_z = c[5]
+        cbegin_x, cend_x, cbegin_y, cend_y, cbegin_z, cend_z = c
         for interval in x:
             pass
     # is this the right course?
