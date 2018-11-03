@@ -1,5 +1,6 @@
 #!/bin/python3
 
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler028
 
 """
 https://math.stackexchange.com/questions/1347560/quadratic-polynomials-describe-the-diagonal-lines-in-the-ulam-spiral
