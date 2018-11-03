@@ -1,32 +1,27 @@
 #!/bin/python3
 
-#https://www.hackerrank.com/contests/projecteuler/challenges/euler001
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler001
+
+# formula for sum of numbers: https://brilliant.org/wiki/sum-of-n-n2-or-n3/
+
+
+def sum_1_to(n):
+    return n*(n+1)//2
+
 
 def multiples_of_3_and_5(n):
     """
     input integer n
     return sum of multiples of 3 and 5 below n
     """
-    num_mul_3 = (n-1)//3
-    num_mul_5 = (n-1)//5
-    num_mul_15 = (n-1)//15
-    sum_mul_3 = 3*num_mul_3*(num_mul_3 + 1)//2
-    sum_mul_5 = 5*num_mul_5*(num_mul_5 + 1)//2
-    sum_mul_15 = 15*num_mul_15*(num_mul_15 + 1)//2
-    res = sum_mul_3 + sum_mul_5 - sum_mul_15
-    return res
+    number_of_multiples_of_3 = (n-1)//3
+    number_of_multiples_of_5 = (n-1)//5
+    number_of_multiples_of_15 = (n-1)//15
+    sum_of_multiples_of_3 = 3*sum_1_to(number_of_multiples_of_3)
+    sum_of_multiples_of_5 = 5*sum_1_to(number_of_multiples_of_5)
+    sum_of_multiples_of_15 = 15*sum_1_to(number_of_multiples_of_15)
+    return sum_of_multiples_of_3 + sum_of_multiples_of_5 - sum_of_multiples_of_15
 
 
 if __name__ == '__main__':
-    print(multiples_of_3_and_5(1000))
-    # t = int(input().strip())
-    # for a0 in range(t):
-    #     n = int(input().strip())
-    #     num_mul_3 = (n-1)//3
-    #     num_mul_5 = (n-1)//5
-    #     num_mul_15 = (n-1)//15
-    #     sum_mul_3 = 3*num_mul_3*(num_mul_3 + 1)//2
-    #     sum_mul_5 = 5*num_mul_5*(num_mul_5 + 1)//2
-    #     sum_mul_15 = 15*num_mul_15*(num_mul_15 + 1)//2
-    #     res = sum_mul_3 + sum_mul_5 - sum_mul_15
-    #     print(res)
+    # print(multiples_of_3_and_5(1000))
