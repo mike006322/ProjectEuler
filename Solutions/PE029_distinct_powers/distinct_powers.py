@@ -1,6 +1,6 @@
 #!/bin/python3
 
-#https://www.hackerrank.com/contests/projecteuler/challenges/euler029
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler029
 
 
 def gcd(a,b):
