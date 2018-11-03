@@ -2,8 +2,6 @@
 
 # https://www.hackerrank.com/contests/projecteuler/challenges/euler001
 
-# formula for sum of numbers: https://brilliant.org/wiki/sum-of-n-n2-or-n3/
-
 
 def sum_1_to(n):
     return n*(n+1)//2
