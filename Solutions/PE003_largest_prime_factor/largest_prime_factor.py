@@ -2,11 +2,10 @@
 
 #https://www.hackerrank.com/contests/projecteuler/challenges/euler003
 
-import sys
-
 # Two important considerations here:
 # 1.) First is that if you increment from the smallest prime dividing the primes away from n then the next smallest divisor you find of n will be prime.
 # 2.) Second is that if there is a single prime factor greater than sqrt(n) then after the loop n will equal it
+
 
 def largest_prime_factor(n):
     max = n
@@ -30,6 +29,7 @@ def largest_prime_factor(n):
     # by 2.)
     else:
         return int(res)
+
 
 if __name__ == '__main__':
     print(largest_prime_factor(600851475143))
