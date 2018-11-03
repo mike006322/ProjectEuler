@@ -11,7 +11,6 @@ def sum_1_to(n):
 
 def multiples_of_3_and_5(n):
     """
-    input integer n
     return sum of multiples of 3 and 5 below n
     """
     number_of_multiples_of_3 = (n-1)//3
@@ -25,3 +24,4 @@ def multiples_of_3_and_5(n):
 
 if __name__ == '__main__':
     # print(multiples_of_3_and_5(1000))
+    pass
