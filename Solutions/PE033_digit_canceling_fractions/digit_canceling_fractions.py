@@ -265,7 +265,17 @@ def digit_canceling_fractions5(N, K):
     return sum(x[0] for x in res), sum(x[1] for x in res), res
 
 
-# below are the most time-efficient solutions
+# below are the most time-efficient solutions:
+
+# Explanation: Consider that we want solutions "n/d = n2/d2".
+# Iterate through possible values of n which has N digits.
+# Then iterate over N-K possible digits from the digits of n (N choose N-K) to make n2.
+# Now, consider n/n2. We must have n/n2 = d/d2 and d must have the digit/s of n that n2 doesn't have.
+# The clever step is to iterate through fractions that are equal to n/n2;
+# this means divide both n and n2 by g = gcd(n, n2)
+# and then multiply both n/g and n2 /g by integer i, which you will iterate.
+# If we write n/n2 as an ordered pair (n, n2) then the iteration looks like ((n/g)*i, (n2/g)*i), i += 1,
+# and for each iteration of i you check if (n/g)*i has the digits of n that n2 doesn't have.
 
 
 def has_digits(number, digits):
