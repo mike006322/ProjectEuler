@@ -108,6 +108,7 @@ def digit_canceling_fractions(N, K):
     numerator and denominator have N digits
     numerator and denominator share K digits
     numerator2 and denominator2 have N-K digits
+    0's are never canceled
     returns the sum of all the numerators, sum of all the denominators
     """
     res = set()
