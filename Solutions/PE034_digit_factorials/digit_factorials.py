@@ -22,6 +22,15 @@ def digit_factorial(n):
     return res
 
 
+def digit_factorial_sum(n):
+    res = 0
+    for i in range(3, n):
+        digits = tuple(map(factorial, make_digits(i)))
+        if sum(digits) == i:
+            res += i
+    return res
+
+
 if __name__ == '__main__':
     n = int(input())
     print(digit_factorial(n))
