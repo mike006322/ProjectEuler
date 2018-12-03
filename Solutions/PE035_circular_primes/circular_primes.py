@@ -70,6 +70,7 @@ def circular_primes(n):
     n_digits = make_digits(n)
     max_n = make_number([9]*len(n_digits))
     primes = Sieve_of_Eratosthenes_without_0_2_4_5_6_8(max_n + 1)
+    check_primes = set(primes)
     checked = set()
     for p in primes:
         if p in checked:
@@ -82,7 +83,7 @@ def circular_primes(n):
         for num_digits in rotations(p_digits):
             num = make_number(num_digits)
             checked.add(num)
-            if num not in primes:
+            if num not in check_primes:
                 is_circular = False
             else:
                 if num < n:
