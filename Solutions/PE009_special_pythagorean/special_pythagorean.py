@@ -2,6 +2,7 @@
 
 # https://www.hackerrank.com/contests/projecteuler/challenges/euler009
 
+
 def generate_primitive_pythagorean_triples(N):
     """
     generates all primitive pythagorean triples such that a + b + c <= n
@@ -15,6 +16,7 @@ def generate_primitive_pythagorean_triples(N):
             m += 1
         n += 1
     return res
+
 
 def check_multiples_of_primitives(primitives, N):
     """
@@ -31,6 +33,7 @@ def check_multiples_of_primitives(primitives, N):
             i += 1
     return res
 
+
 def choose_largest(triples):
     """
     returns the largest product of a triple
@@ -44,6 +47,7 @@ def choose_largest(triples):
             m = product
     return m
 
+
 def special_pythagorean(N):
     if N % 2 != 0:
         return -1
@@ -51,6 +55,7 @@ def special_pythagorean(N):
     triples = check_multiples_of_primitives(primitives, N)
     m = choose_largest(triples)
     return m
+
 
 if __name__ == '__main__':
     # primitives = generate_primitive_pythagorean_triples(1000)
