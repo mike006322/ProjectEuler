@@ -67,10 +67,15 @@ def find_d_i_n(n, lookup_table):
 
 if __name__ == '__main__':
     lookup_table = make_lookup_table(18)
-    t = int(input())
-    for _ in range(t):
-        digits = map(int, input().split())
-        product = 1
-        for digit in digits:
-            product *= find_d_i_n(digit, lookup_table)
-        print(product)
+    digits = [10**i for i in range(7)]
+    product = 1
+    for digit in digits:
+        product *= find_d_i_n(digit, lookup_table)
+    print(product)
+    # t = int(input())
+    # for _ in range(t):
+    #     digits = map(int, input().split())
+    #     product = 1
+    #     for digit in digits:
+    #         product *= find_d_i_n(digit, lookup_table)
+    #     print(product)
