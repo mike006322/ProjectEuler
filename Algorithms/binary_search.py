@@ -1,6 +1,7 @@
 def binary_search(alist, item):
     """
     returns the index where the item is in alist. O(logn) time
+    alist must be in ascending order
     # returns the index of element closest to the item that is still <= item in alist
     """
     first = 0
