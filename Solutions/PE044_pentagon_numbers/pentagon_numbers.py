@@ -23,7 +23,6 @@
 # 1 + 12(6nK - 3K^2 - K) = (6r +- 1)^2
 
 
-
 def pentagonal_number(n):
     """
     returns P_n = n(3n-1)/2 = (3n^2 - n)/2
@@ -51,13 +50,18 @@ def pentagonal_numbers(N, K):
     for n in range(K+1, N):
         # test whether (3n^2 - n)/2 - (3n^2 - 6nK - n + 3K^2 + K)/2 is pentagonal
         P_n_minus_P_n_K = (6*n*K - 3*K**2 - K)//2
-        if is_pentagonal(P_n_minus_P_n_K):
-            print(pentagonal_number(n))
+        # if is_pentagonal(P_n_minus_P_n_K):
+        #     print(pentagonal_number(n))
         P_n_plus_P_n_K = pentagonal_number(n) + pentagonal_number(n-K)
-        if is_pentagonal(P_n_plus_P_n_K):
-            print(pentagonal_number(n))
+        # if is_pentagonal(P_n_plus_P_n_K):
+        #     print(pentagonal_number(n))
+        if is_pentagonal(P_n_minus_P_n_K) and is_pentagonal(P_n_plus_P_n_K):
+            print(P_n_minus_P_n_K)
 
 
 if __name__ == '__main__':
     # pentagonal_numbers(50, 8)
-    pentagonal_numbers(*map(int, input().split()))
+    # pentagonal_numbers(*map(int, input().split()))
+    for i in range(1, 9999):
+        pentagonal_numbers(10000, i)
+
