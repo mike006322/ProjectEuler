@@ -60,4 +60,9 @@ def triangular_pentagonal_hexagonal(n, a, b):
 
 
 if __name__ == '__main__':
-    triangular_pentagonal_hexagonal(*map(int, input().split()))
+    # triangular_pentagonal_hexagonal(*map(int, input().split()))
+    j = 1
+    for j in range(1, 100000):
+        i = hexagonal_number(j)
+        if is_pentagonal(i) and is_triangular(i):
+            print(i)
