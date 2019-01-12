@@ -31,7 +31,7 @@ class Test(unittest.TestCase):
         self.assertEqual(spell_num2('1010001'), 'One Million Ten Thousand One ')
 
     def test_spell_num3(self):
-        #sys.stdout = StringIO()
+        # sys.stdout = StringIO()
         # print(spell_num3('12345'))
         # if not hasattr(sys.stdout, "getvalue"):
         #     self.fail("need to run in buffered mode")
