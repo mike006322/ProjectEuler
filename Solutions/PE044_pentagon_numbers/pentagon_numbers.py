@@ -38,7 +38,7 @@ def is_pentagonal(n):
     # 0 = 3*m**2 - m - n
     # (1 +- (1 + 12*n)**.5)/6
     if 1 + 12*n > 1:
-        if (1 + (1 + 24*n)**.5)/6 == (1 + (1 + 24*n)**.5)//6:
+        if (1 + (1 + 24*n)**.5) % 6 == 0:
             return True
     return False
 
