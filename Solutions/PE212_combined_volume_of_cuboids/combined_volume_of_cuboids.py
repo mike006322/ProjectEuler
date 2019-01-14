@@ -2,7 +2,13 @@
 
 # https://www.hackerrank.com/contests/projecteuler/challenges/euler212
 
-from kd_tree import kd_tree
+# resource links:
+# https://www.geeksforgeeks.org/interval-tree/
+# https://www.sciencedirect.com/science/article/pii/S0925772109000595
+# https://www.youtube.com/results?search_query=kd+tree
+
+from Solutions.PE212_combined_volume_of_cuboids.kd_tree import *
+
 
 def find_intersections(cuboid, three_d_tree):
     """
@@ -11,6 +17,7 @@ def find_intersections(cuboid, three_d_tree):
     Search through the tree that contains cuboids with their intersection values
     Return list of cuboids incident to input with their intersection values
     """
+
 
 def cuboid_contained(cuboid, intersections):
     """
@@ -53,7 +60,9 @@ def cuboid_intersection(cuboid1, cuboid2):
     x = (begin_x, end_x)
     y = (begin_y, end_y)
     z = (begin_z, end_z)
-    while len(x) > 0 and len(y) > 0 and len(z) > 0 and
+    while len(x) > 0 and len(y) > 0 and len(z) > 0:
+        pass
+
 
 def cuboid_volume(cuboid):
     """
@@ -71,13 +80,14 @@ def cuboid_volume(cuboid):
     z = begin_z - end_z
     return abs(x*y*z)
 
+
 def combined_volume_of_cuboids(cuboids):
     """
     Input is a list of cuboids in the form (begin_x, end_x, begin_y, end_y, begin_z, end_z).
     Return the combined volume of the cuboids.
     """
 
-    three_d_tree = kd_tree()
+    three_d_tree = KdTree()
 
     for cuboid in cuboids:
         intersections = find_intersections(cuboid, three_d_tree)
@@ -91,6 +101,7 @@ def combined_volume_of_cuboids(cuboids):
     for cuboid, intersection_value in three_d_tree.members:
         volume += cuboid_volume(cuboid) * (-1)**intersection_value
     return volume
+
 
 if __name__ == '__main__':
     pass
