@@ -43,7 +43,12 @@ def goldbachs_other_conjecture(n, primes):
 
 
 if __name__ == '__main__':
-    t = int(input())
+    # t = int(input())
     primes = Sieve_of_Eratosthenes(5*10**5)
-    for _ in range(t):
-        print(goldbachs_other_conjecture(int(input()), primes))
+    # for _ in range(t):
+    #     print(goldbachs_other_conjecture(int(input()), primes))
+    for i in range(3, 10**6, 2):
+        if i not in primes:
+            if goldbachs_other_conjecture(i, primes) == 0:
+                print(i)
+                break
