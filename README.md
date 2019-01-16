@@ -14,6 +14,8 @@ The motivation for starting Project Euler, and its continuation, is to
 provide a platform for the inquiring mind to delve into unfamiliar
 areas and learn new concepts in a fun and recreational context."
 
+<img src = "https://projecteuler.net/images/euler_portrait.png">
+
 Most problem details are taken from
 [Hackerrank.com](https://www.hackerrank.com/contests/projecteuler/challenges)
 where they are identical to the official page.
