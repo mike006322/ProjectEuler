@@ -1,6 +1,8 @@
 #include <iostream>
 #include <math.h>
 
+//https://www.hackerrank.com/contests/projecteuler/challenges/euler003
+
 using namespace std;
 
 long LargestPrimeFactor(long n) {
