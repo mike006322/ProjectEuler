@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# #https://www.hackerrank.com/contests/projecteuler/challenges/euler002
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler002
 
 from functools import lru_cache
 
