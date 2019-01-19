@@ -1,5 +1,5 @@
 import unittest
-from largest_prime_factor import *
+from Solutions.PE003_largest_prime_factor.python.largest_prime_factor import *
 
 
 class Test(unittest.TestCase):
