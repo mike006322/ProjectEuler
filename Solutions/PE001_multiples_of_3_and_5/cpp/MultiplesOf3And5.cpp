@@ -1,5 +1,7 @@
 #include <iostream>
 
+//https://www.hackerrank.com/contests/projecteuler/challenges/euler001
+
 using namespace std;
 
 long int SumOneTo(long int n){
