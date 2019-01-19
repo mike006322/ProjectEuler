@@ -1,2 +1,6 @@
 # Pycharm dictionaries
 .idea/
+
+# builds, object files
+*.o
+*.exe
