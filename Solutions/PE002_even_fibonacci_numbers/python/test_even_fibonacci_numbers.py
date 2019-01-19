@@ -1,5 +1,5 @@
 import unittest
-from even_fibonacci_numbers import *
+from Solutions.PE002_even_fibonacci_numbers.python.even_fibonacci_numbers import *
 
 
 class Test(unittest.TestCase):
