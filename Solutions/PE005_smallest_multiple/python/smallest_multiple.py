@@ -1,6 +1,9 @@
-#https://www.hackerrank.com/contests/projecteuler/challenges/euler005
+#!/bin/python3
 
-def Sieve_of_Eratosthenese(n):
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler005
+
+
+def sieve_of_eratosthenese(n):
     """
     Return list of primes less than n
     """
@@ -21,6 +24,7 @@ def Sieve_of_Eratosthenese(n):
         i += 2
     return res
 
+
 def smallest_multiple(n):
     """
     Find all primes less than n
@@ -29,13 +33,14 @@ def smallest_multiple(n):
     if n == 1:
         return 1
     res = 1
-    primes = Sieve_of_Eratosthenese(n)
+    primes = sieve_of_eratosthenese(n)
     for p in primes:
         i = 1
         while p**(i+1) <= n:
             i += 1
         res *= p**i
     return res
+
 
 if __name__ == '__main__':
     t = int(input().strip())
