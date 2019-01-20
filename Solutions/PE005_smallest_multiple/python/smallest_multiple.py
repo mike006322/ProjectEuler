@@ -3,7 +3,7 @@
 # https://www.hackerrank.com/contests/projecteuler/challenges/euler005
 
 
-def sieve_of_eratosthenese(n):
+def sieve_of_eratosthenes(n):
     """
     Return list of primes less than n
     """
@@ -33,7 +33,7 @@ def smallest_multiple(n):
     if n == 1:
         return 1
     res = 1
-    primes = sieve_of_eratosthenese(n)
+    primes = sieve_of_eratosthenes(n)
     for p in primes:
         i = 1
         while p**(i+1) <= n:
