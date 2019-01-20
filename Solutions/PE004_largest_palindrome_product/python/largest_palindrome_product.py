@@ -1,4 +1,7 @@
-#https://www.hackerrank.com/contests/projecteuler/challenges/euler004
+#!/bin/python3
+
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler004
+
 
 def next_palindrome(n):
     """
@@ -12,6 +15,7 @@ def next_palindrome(n):
     res = first_half + first_half[2] + first_half[1] + first_half[0]
     return int(res)
 
+
 def has_three_digit_factors(n):
     """
     incrimints from 101 to 999 looking for 3 digit factors
@@ -21,10 +25,11 @@ def has_three_digit_factors(n):
     while i < 1000:
         if n % i == 0:
             d = n//i
-            if d > 99 and d < 1000:
+            if 99 < d < 1000:
                 return True
         i += 1
     return False
+
 
 def largest_palindrome_product(n):
     """
@@ -39,6 +44,7 @@ def largest_palindrome_product(n):
     while not has_three_digit_factors(n):
         n = next_palindrome(n)
     return n
+
 
 if __name__ == '__main__':
     t = int(input().strip())
