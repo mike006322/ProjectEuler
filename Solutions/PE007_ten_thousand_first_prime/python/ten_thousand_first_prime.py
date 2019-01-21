@@ -1,6 +1,9 @@
-#https://www.hackerrank.com/contests/projecteuler/challenges/euler007
+#!/bin/python3
 
-def Sieve_of_Eratosthenes(n):
+# https://www.hackerrank.com/contests/projecteuler/challenges/euler007
+
+
+def sieve_of_eratosthenes(n):
     """
     Return list of primes less than n
     """
@@ -21,8 +24,9 @@ def Sieve_of_Eratosthenes(n):
         i += 2
     return res
 
+
 if __name__ == '__main__':
-    first_10000_primes = Sieve_of_Eratosthenes(104729)
+    first_10000_primes = sieve_of_eratosthenes(104729)
     t = int(input().strip())
     for a0 in range(t):
         n = int(input().strip())
