@@ -2,6 +2,7 @@
 
 # https://www.hackerrank.com/contests/projecteuler/challenges/euler010
 
+
 def prime_sums(n):
     """
     Return list of len = n + 1
