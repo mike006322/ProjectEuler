@@ -2,23 +2,8 @@
 
 # https://www.hackerrank.com/contests/projecteuler/challenges/euler012
 
-def count_divisors(n):
-    """
-    input integer n
-    returns the number of divisors of n
-    """
-    res = 0
-    for i in range(1, int(n**.5) + 1):
-        if n % i == 0:
-            # If divisors are equal, count only one
-            if n/i == i:
-                res += 1
-            # Otherwise count both
-            else:
-                res += 2
-    return res
 
-def Sieve_of_Eratosthenes(n):
+def sieve_of_eratosthenes(n):
     """
     Return list of primes less than n
     """
@@ -39,7 +24,8 @@ def Sieve_of_Eratosthenes(n):
         i += 2
     return res
 
-def fast_count_divisors(n, primes):
+
+def count_divisors(n, primes):
     """
     counts divisors using a table of primes
     """
@@ -57,16 +43,6 @@ def fast_count_divisors(n, primes):
         i += 1
     return divisors
 
-def triangle_number_with_n_divisors(n):
-    i = 1
-    triangle = 1
-    divisors = 1
-    while divisors <= n:
-        i += 1
-        triangle += i
-        divisors = count_divisors(triangle)
-        #print(i, triangle, divisors)
-    return triangle
 
 def triangle_number_with_more_than_n_divisors(n):
     i = 1
@@ -75,16 +51,17 @@ def triangle_number_with_more_than_n_divisors(n):
     m = 1
     table = dict()
     table[0] = triangle
-    primes = Sieve_of_Eratosthenes(1000000)
+    primes = sieve_of_eratosthenes(1000000)
     while divisors <= n:
         i += 1
         triangle += i
-        divisors = fast_count_divisors(triangle, primes)
+        divisors = count_divisors(triangle, primes)
         if divisors > m:
             for j in range(m, divisors):
                 table[j] = triangle
             m = divisors
     return table
+
 
 if __name__ == '__main__':
     table = triangle_number_with_more_than_n_divisors(500)
