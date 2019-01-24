@@ -66,9 +66,7 @@ def fast_sum_of_proper_divisors(n, primes, primesset):
 
 
 if __name__ == '__main__':
-    from Algorithms.Sieve_of_Eratosthenes import Sieve_of_Eratosthenes
-    from Algorithms.Sieve_of_Eratosthenes import fast_Sieve_of_Eratosthenes
-    from Algorithms.Sieve_of_Eratosthenes import Sieve_of_Eratosthenes_numpy
+    from Algorithms.python.Sieve_of_Eratosthenes import Sieve_of_Eratosthenes_numpy
 
     # time_function(Sieve_of_Eratosthenes, 1000000)
     # time_function(fast_Sieve_of_Eratosthenes, 1000000)

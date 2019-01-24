@@ -2,7 +2,7 @@
 
 # https://www.hackerrank.com/contests/projecteuler/challenges/euler047
 
-from Algorithms.Sieve_of_Eratosthenes import fast_Sieve_of_Eratosthenes as Sieve_of_Eratosthenes
+from Algorithms.python.Sieve_of_Eratosthenes import fast_Sieve_of_Eratosthenes as Sieve_of_Eratosthenes
 
 
 def distinct_prime_factors(N, K):

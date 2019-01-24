@@ -1,6 +1,5 @@
 import unittest
 from Solutions.PE048_self_powers.self_powers import *
-from Algorithms.running_time import time_function
 
 
 class Test(unittest.TestCase):
