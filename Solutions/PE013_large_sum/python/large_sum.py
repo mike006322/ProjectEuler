@@ -2,12 +2,14 @@
 
 # https://www.hackerrank.com/contests/projecteuler/challenges/euler013
 
+
 def large_sum(nums):
     res = ''
     n = sum(nums)
     for i in range(10):
         res += str(n)[i]
     return res
+
 
 if __name__ == '__main__':
     nums = []
