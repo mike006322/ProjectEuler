@@ -10,3 +10,5 @@ function sieveOfEratosthenes(c) {
     }
     return b;
 }
+
+module.exports.sieveOfEratosthenes = sieveOfEratosthenes;
