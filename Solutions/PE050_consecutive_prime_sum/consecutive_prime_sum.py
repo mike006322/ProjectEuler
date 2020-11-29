@@ -99,7 +99,6 @@ def find_max_consecutive_prime_sum(n):
 
 
 if __name__ == '__main__':
-    print(find_max_consecutive_prime_sum_indexed_at_0(1000))
     print(find_max_consecutive_prime_sum(1000000000000))
     # for _ in range(int(input())):
     #     n = int(input())
